@@ -6,7 +6,7 @@ implement `index.html`
 
 ## Designs
 
-![target layout](/assets/images/Homepage_draw.png)
+![target layout](/assets/Images/plan%20inspo.png)
 
 ## Work
 
