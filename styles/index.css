@@ -36,25 +36,26 @@ body {
 /* Project sections */
 #projects-container div {
   background-color: #ffffff;
-  padding: 20px;              /* px for offsets */
-  border-radius: 8px;         /* px for offsets */
+  padding: 20px; /* px for offsets */
+  border-radius: 8px; /* px for offsets */
   width: 85%;
   max-width: 400px;
   margin: 0 auto;
-  border: 2px solid #c9a7ff;  /* soft purple border */
+  border: 2px solid #c9a7ff; /* soft purple border */
 }
 
 #projects-container h2 {
-  margin-bottom: 1rem;        /* rem for margin */
+  margin-bottom: 1rem; /* rem for margin */
   color: #6a0dad;
 }
 
+/* Placeholder Box — bigger but still fits inside card */
 .placeholder-box {
-  width: 100px;
-  height: 350px;
-  background-color: #d9c2ff;  /* light purple box */
-  border-radius: 8px;         /* px for offsets */
-  margin-bottom: 1.5rem;      /* rem for margin */
+  width: 100%; /* fills inside the card */
+  height: 280px; /* bigger rectangle */
+  background-color: #d9c2ff;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
 }
 
 #projects-container p {
@@ -63,8 +64,8 @@ body {
 
 #projects-container a {
   display: inline-block;
-  margin-top: 1rem;           /* rem for margin */
-  color: #7b2cbf;             /* purple link */
+  margin-top: 1rem; /* rem for margin */
+  color: #7b2cbf; /* purple link */
   text-decoration: none;
 }
 
@@ -80,19 +81,19 @@ body {
 }
 
 #bottom-container h3 {
-  margin-bottom: 1rem;        /* rem */
+  margin-bottom: 1rem; /* rem */
   color: #6a0dad;
 }
 
 #bottom-container p {
   max-width: 80%;
-  margin: 0 auto 2rem auto;   /* rem */
+  margin: 0 auto 2rem auto; /* rem */
   color: #5a4a6e;
 }
 
 #bottom-container a {
   display: block;
-  margin: 1rem 0;             /* rem */
+  margin: 1rem 0; /* rem */
   color: #7b2cbf;
   text-decoration: none;
 }
@@ -107,4 +108,33 @@ body {
     grid-template-columns: 48% 48%;
     justify-content: center;
   }
+
+  /* Make the preview card span both columns */
+  #projects-container div:nth-of-type(5) {
+    grid-column: 1 / -1;
+    max-width: 700px; /* wider card so the box can grow */
+  }
+
+  /* Desktop: bigger centered rectangle */
+  .placeholder-box {
+    width: 90%; /* bigger but still inside border */
+    height: 320px; /* taller rectangle */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.back-button {
+  display: inline-block;
+  margin: 1.5rem; /* rem for margins */
+  padding: 10px 16px; /* px for offsets */
+  background-color: #d9c2ff;
+  color: #6a0dad;
+  border-radius: 6px; /* px */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  background-color: #c9a7ff;
 }
