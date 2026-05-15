@@ -25,7 +25,23 @@ body {
   color: #5a4a6e;
 }
 
-/* Projects Container (Home Page Grid) */
+/* Back Button */
+.back-button {
+  display: inline-block;
+  margin: 1.5rem;
+  padding: 10px 16px;
+  background-color: #d9c2ff;
+  color: #6a0dad;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  background-color: #c9a7ff;
+}
+
+/* Projects Container */
 #projects-container {
   padding: 2rem;
   display: grid;
@@ -33,6 +49,7 @@ body {
   gap: 2rem;
 }
 
+/* Project sections */
 #projects-container div {
   background-color: #ffffff;
   padding: 20px;
@@ -41,13 +58,10 @@ body {
   max-width: 400px;
   margin: 0 auto;
   border: 2px solid #c9a7ff;
-
-  /* NEW: make boxes taller */
-  min-height: 260px;
 }
 
 #projects-container h2 {
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   color: #6a0dad;
 }
 
@@ -55,14 +69,51 @@ body {
   color: #5a4a6e;
 }
 
-#projects-container a {
-  display: inline-block;
-  color: #7b2cbf;
-  text-decoration: none;
+/* Placeholder Box */
+.placeholder-box {
+  width: 100%;
+  height: 280px;
+  background-color: #d9c2ff;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
 }
 
-#projects-container a:hover {
-  text-decoration: underline;
+/* Preview Image */
+.placeholder-preview-image img,
+.preview-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* Desktop layout */
+@media (min-width: 700px) {
+  #projects-container {
+    grid-template-columns: 48% 48%;
+    justify-content: center;
+  }
+
+  /* Make preview card span both columns */
+  #projects-container div:nth-of-type(5) {
+    grid-column: 1 / -1;
+    max-width: 700px;
+  }
+
+  /* Desktop placeholder box */
+  .placeholder-box {
+    width: 90%;
+    height: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Desktop preview image */
+  .preview-image {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
 
 /* Bottom Container */
@@ -92,12 +143,4 @@ body {
 
 #bottom-container a:hover {
   text-decoration: underline;
-}
-
-/* GRID for bigger screens */
-@media (min-width: 700px) {
-  #projects-container {
-    grid-template-columns: 48% 48%;
-    justify-content: center;
-  }
 }
